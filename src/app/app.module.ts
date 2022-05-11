@@ -28,7 +28,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 
 
 
@@ -59,4 +59,13 @@ import { environment } from '../environments/environment';
 export class AppModule {
   
 }
+
+
+// echo "# Joker84a.github.io" >> README.md
+// git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin https://github.com/Joker84a/Joker84a.github.io.git
+// git push -u origin main
 
