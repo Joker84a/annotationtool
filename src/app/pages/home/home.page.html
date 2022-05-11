@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>GraphReview 1.0</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <div *ngIf="displayTutorial">
+    <ion-slides #slides (ionSlideReachEnd)="reachedEnd()">
+      <ion-slide>
+        <div class="w-100 text-center">
+          <img style="max-width: 300px;" src="../../../assets/slides/slide1.png">
+        </div>
+      </ion-slide> 
+    
+      <ion-slide>
+        <div class="w-100 text-center">
+          <img style="max-width: 300px;" src="../../../assets/slides/slide2.png">
+        </div>
+      </ion-slide> 
+
+      <ion-slide>
+        <div class="w-100 text-center">
+          <img style="max-width: 300px;" src="../../../assets/slides/slide3.png">
+        </div>
+      </ion-slide> 
+
+      <ion-slide>
+        <div class="w-100 text-center">
+          <img style="max-width: 300px;" src="../../../assets/slides/slide4.png">
+        </div>
+      </ion-slide> 
+
+      <ion-slide>
+        <div class="w-100 text-center">
+          <img style="max-width: 300px;" src="../../../assets/slides/slide5.png">
+        </div>
+      </ion-slide> 
+
+      <ion-slide>
+        <div class="w-100 text-center">
+          <img style="max-width: 300px;" src="../../../assets/slides/slide6.png">
+        </div>
+      </ion-slide> 
+    </ion-slides>  
+
+    <div class="w-100 text-center">
+      <ion-button shape="round" (click)="nextSlides(slides)">Avanti</ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="!displayTutorial">
+    <div class="mx-0 mx-sm-auto">
+      <div class="card">
+        <div>
+          <div class="card-body custom-div">
+            <div class="text-center">
+              <i class="far fa-file-alt fa-4x mb-3 text-primary"></i>
+              <p>
+                <strong>{{path.split('/')[4]}}</strong>
+              </p>
+              <img class="img-class my-2" src="{{path}}">
+              <div>
+                <p>
+                  Pensi che questo grafico risulti 
+                  <strong>essere significativo?</strong>
+                </p>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <form class="" action="">
+            <div class="card-body custom-card mx-auto pt-0 ">
+              <p class="text-center"><strong>Le risposte:</strong></p>
+              <div class="form-check mb-2 box">
+                <input class="form-check-input" type="radio" name="exampleForm" id="one"  value="1" (change)="checkValue($event.target)" required/>
+                <span class="check"></span>
+                <label class="form-check-label" for="one">
+                  Si
+                </label>
+              </div>
+              <div class="form-check mb-2 box">
+                <input class="form-check-input" type="radio" name="exampleForm" id="two" value="0" (change)="checkValue($event.target)" required/>
+                <span class="check"></span>
+                <label class="form-check-label" for="two">
+                  No
+                </label>
+              </div>
+            </div>
+          
+            <div class="card-footer text-end text-center">
+              <button type="button" class="btn btn-primary" (click)="next()">Conferma</button>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</ion-content>

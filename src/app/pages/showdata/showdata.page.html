@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      Bar Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Upload image to dataset
+    </ion-card-header>
+    <div class="row">
+      <div class="col-12 text-center">
+        <ion-button shape="round" (click)="upload()">Upload</ion-button>
+      </div>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Download
+    </ion-card-header>
+    <div class="row">
+      <div class="col-12 text-center">
+        <ion-button shape="round" (click)="download()">Scarica</ion-button>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>
