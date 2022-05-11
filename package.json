@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://Joker84a.github.io/",
-
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -46,6 +45,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "@sweetalert2/ngx-sweetalert2": "^11.0.0",
+    "angular-cli-ghpages": "^1.0.0",
     "bootstrap": "4.6",
     "chart.js": "^3.7.1",
     "cordova-plugin-google-analytics": "^1.9.1",
